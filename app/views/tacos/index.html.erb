@@ -1,0 +1,20 @@
+<h1>Tacos are delish!</h1>
+<!-- I'm an HTML comment -->
+
+<!-- the below tells it that this is embedded ruby -->
+<% 
+    tacos =["Carnitas", "Al Pastor", "Fish"]
+%>
+
+<p>There are <%= tacos.count%> tacos: </p>
+<!-- equal sign has to be right next to the % or else it implies a variable. This is the same as "puts" for the purpose of erb (embedded ruby land) -->
+
+
+<ul>
+    <% for taco in tacos %>
+        <li><%= taco %> </li>
+    <% end %>
+    <li> Carnitas </li>
+    <li> Al Pastor </li>
+    <li> Fish </li>
+</ul>

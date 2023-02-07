@@ -1,0 +1,25 @@
+<h1> I love cards and have a gambling problem </h1>
+
+<%
+    ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "jack", "queen", "king", "ace"]
+    suits = ["clubs", "diamonds", "hearts", "spades"]
+
+    deck = []
+    for rank in ranks
+        for suit in suits
+            card = "#{rank} of #{suit}"
+            deck.push(card)
+        end
+    end
+
+    shuffled_deck = deck.shuffle
+    hand = shuffled_deck[0,5]
+%>
+
+<% for card in hand %>
+  <p>  <%= card %> </p>
+  <img src="/images/cards/<%= card %>.svg">
+<% end %>
+<p>
+    <a href="">Deal again!<a/>    
+</p>
